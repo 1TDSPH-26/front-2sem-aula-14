@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Navigate, useNavigate } from "react-router";
 
 export default function Home(){
     document.title = "Home"
@@ -32,6 +33,7 @@ export default function Home(){
     "site_admin": boolean;
     }
 
+    const navegate = useNavigate();
     const[usuario, setUsuario] = useState<TipoUsuarioGit[]>([]);
 
         useEffect(()=>{
@@ -43,11 +45,16 @@ export default function Home(){
 
             if(!response.ok){
                 throw new Error ("A listagem dos usuários falhou!");
+
+
             }
 
             const data = await response.json();
+            setUsuario(data);
+
         } catch(error){
-            console.log(error)
+            console.log(error);
+            navegate("/erro/usuarios-nao-encontrados")
         }
             
         } 
