@@ -16,14 +16,9 @@ export default function EditarProdutos() {
   const [produto, setProduto] = useState<{ id: number, nome: string, preco: number }>({} as { id: number, nome: string, preco: number });
 
   useEffect( ()=> {
-
     const produtoEncontrado = listaProdutos.find( (p)=> p.id ===  Number(id) );
-
     setProduto(produtoEncontrado!);
-
   },[]);
-
-
 
   return (
     <main>
