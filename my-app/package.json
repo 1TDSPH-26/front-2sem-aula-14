@@ -10,17 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "@tailwindcss/vite": "^4.3.3",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8",
-    "react-router": "^8.3.1",
-    "tailwindcss": "^4.3.3"
-=======
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-router": "^8.3.1"
->>>>>>> 47448d4cbe13338020d2a53559da0250d9f6519a
   },
   "devDependencies": {
     "@types/node": "^24.13.3",
