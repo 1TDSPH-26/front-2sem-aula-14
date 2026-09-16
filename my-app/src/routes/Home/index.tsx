@@ -48,7 +48,7 @@ async function loadingData() {
       throw new Error("A listagem dos usuáros falhou!");
     }
 
-    const data: TipoUsuarioGit = await response.json();
+    const data: TipoUsuarioGit[] = await response.json();
 
     setUsuarios(data);
 
