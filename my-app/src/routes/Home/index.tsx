@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 export default function Home() {
   document.title = "Home";
 
+  const navigate = useNavigate
+
   const [clicado, setClicado] = useState<number>(0);
 
   let chamadas: Number = 0;
@@ -54,6 +56,7 @@ site_admin: boolean;
 
     }catch(error){
       console.log(error);
+      navigate("/erro/usuários-nao-encontrados")
     }
   }
 
