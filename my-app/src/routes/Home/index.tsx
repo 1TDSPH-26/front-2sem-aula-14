@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 
 export default function Home(){
     document.title = "Home";
+
+    const navigate = useNavigate();
 
     const[clicado, setClicado] = useState<number>(0);
 
@@ -49,6 +52,7 @@ export default function Home(){
                 setUsuarios(data);
             } catch(error){
                 console.log(error);
+                navigate("/erro/usuarios-nao-encontrados");
             }
         }
 
